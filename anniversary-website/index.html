@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Anniversary ❤️</title>
+
+<style>
+
+:root{
+    --accent:#ff4081;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Comic Sans MS', cursive;
+}
+
+body{
+    background:linear-gradient(
+        135deg,
+        #ffdde1,
+        #ee9ca7,
+        #ffdde1
+    );
+    overflow-x:hidden;
+}
+
+/* COMMON PAGE */
+
+.page{
+    width:100%;
+    min-height:100vh;
+    display:none;
+    padding:30px 0;
+}
+
+/* ENTER PAGE */
+
+#enterPage{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #ffdde1,
+        #ee9ca7,
+        #ffdde1
+    );
+}
+
+.circle{
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.88);
+    backdrop-filter:blur(6px);
+    border:4px solid #ffc0cb;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    box-shadow:0 0 35px rgba(255,182,193,0.8);
+    animation:glow 2s infinite alternate;
+}
+
+.circle h1{
+    color:#ff4081;
+    font-size:32px;
+    line-height:1.4;
+}
+
+.circle p{
+    margin-top:10px;
+    color:#666;
+    font-size:18px;
+}
+
+.enter-btn,
+.slide-btn,
+.back-btn{
+    margin-top:25px;
+    padding:14px 35px;
+    border:none;
+    border-radius:50px;
+    background:#ff4081;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.enter-btn:hover,
+.slide-btn:hover,
+.back-btn:hover{
+    transform:scale(1.08);
+}
+
+/* MAIN PAGE */
+
+#mainPage{
+    text-align:center;
+    background:linear-gradient(
+        135deg,
+        #ffdde1,
+        #ee9ca7,
+        #ffdde1
+    );
+}
+
+/* SCROLLING POLAROIDS */
+
+/* FIXED POLAROIDS */
+
+.polaroid-wrapper{
+    width:100%;
+    margin-top:20px;
+    padding:20px;
+}
+
+.polaroid-track{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    width:100%;
+}
+
+.polaroid{
+    background:rgba(255,255,255,0.88);
+    backdrop-filter:blur(6px);
+    padding:15px 15px 55px;
+    border-radius:10px;
+    position:relative;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.polaroid img{
+    width:240px;
+    height:260px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+.caption{
+    position:absolute;
+    bottom:15px;
+    left:15px;
+    font-size:18px;
+    color:#2b5797;
+    font-weight:bold;
+}
+
+/* TYPEWRITER */
+
+.typewriter-box{
+    width:90%;
+    max-width:700px;
+    margin:60px auto 40px;
+    background:rgba(255,255,255,0.88);
+    backdrop-filter:blur(6px);
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.typewriter-box h1{
+    color:#ff4081;
+    margin-bottom:20px;
+}
+
+.wishes{
+    font-size:1.4rem;
+    line-height:1.8;
+    color:#444;
+    min-height:120px;
+}
+
+/* SLIDESHOW PAGE */
+
+#slideshowPage{
+    text-align:center;
+    background:linear-gradient(
+        135deg,
+        #ffdde1,
+        #ee9ca7,
+        #ffdde1
+    );
+}
+
+.slideshow-container{
+    width:90%;
+    max-width:700px;
+    margin:40px auto;
+    background:rgba(255,255,255,0.88);
+    backdrop-filter:blur(6px);
+    padding:20px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.slide-img{
+    width:100%;
+    height:700px;
+    object-fit:cover;
+    border-radius:20px;
+    display:none;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* ANIMATIONS */
+
+@keyframes glow{
+    from{
+        box-shadow:0 0 15px rgba(255,182,193,0.5);
+    }
+
+    to{
+        box-shadow:0 0 35px rgba(255,182,193,1);
+    }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- ENTER PAGE -->
+
+<div id="enterPage">
+
+    <div class="circle">
+
+        <h1>
+            Happy Marriage <br>
+            Anniversary ❤️
+        </h1>
+
+        <p>To Mom & Dad 💕</p>
+
+        <button class="enter-btn" onclick="enterWebsite()">
+            Enter ❤️
+        </button>
+
+    </div>
+
+</div>
+
+<!-- MAIN PAGE -->
+
+<div id="mainPage" class="page">
+
+    <!-- SCROLLING POLAROIDS -->
+
+    <div class="polaroid-wrapper">
+
+        <div class="polaroid-track">
+
+            <div class="polaroid" style="transform:rotate(-3deg)">
+                <img src="photo4.jpg">
+                <div class="caption">Best Couple ❤️</div>
+            </div>
+
+            <div class="polaroid" style="transform:rotate(4deg)">
+                <img src="photo2.jpg">
+                <div class="caption">Sweet Memories ✨</div>
+            </div>
+
+            <div class="polaroid" style="transform:rotate(-2deg)">
+                <img src="photo3.jpg">
+                <div class="caption">Forever Together 💖</div>
+            </div>
+
+            <div class="polaroid" style="transform:rotate(3deg)">
+                <img src="photo1.jpg">
+                <div class="caption">Family ❤️</div>
+            </div>
+            
+
+        </div>
+
+    </div>
+
+    <!-- TYPEWRITER -->
+
+    <div class="typewriter-box">
+
+        <h1>Happy Anniversary 🎊</h1>
+
+        <div id="typewriter-text" class="wishes"></div>
+
+        <button class="slide-btn" onclick="openSlideshow()">
+            Open Slideshow 📸
+        </button>
+
+    </div>
+
+</div>
+
+<!-- SLIDESHOW PAGE -->
+
+<div id="slideshowPage" class="page">
+
+    <div class="slideshow-container">
+
+        <h1 style="color:#ff4081; margin-bottom:20px;">
+            Beautiful Memories ❤️
+        </h1>
+
+        <img src="photo11.jpg" class="slide-img">
+        <img src="photo12.jpg" class="slide-img">
+        <img src="photo13.jpg" class="slide-img">
+        <img src="photo15.jpg" class="slide-img">
+        <img src="photo16.jpg" class="slide-img">
+        <img src="photo17.jpg" class="slide-img">
+        <img src="photo18.jpg" class="slide-img">
+        <img src="photo19.jpg" class="slide-img">
+        
+        <button class="back-btn" onclick="goBack()">
+            Back ❤️
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+/* ENTER WEBSITE */
+
+function enterWebsite(){
+
+    document.getElementById("enterPage").style.display = "none";
+
+    document.getElementById("mainPage").style.display = "block";
+
+    typeWriter();
+
+}
+
+/* TYPEWRITER */
+
+const message =
+"Mom & Dad ❤️, your love makes our family complete. Wishing you endless happiness, laughter, togetherness, and many more beautiful years ahead ✨💖";
+
+let i = 0;
+
+function typeWriter(){
+
+    if(i < message.length){
+
+        document.getElementById("typewriter-text").innerHTML += message.charAt(i);
+
+        i++;
+
+        setTimeout(typeWriter, 45);
+
+    }
+
+}
+
+/* OPEN SLIDESHOW PAGE */
+
+function openSlideshow(){
+
+    document.getElementById("mainPage").style.display = "none";
+
+    document.getElementById("slideshowPage").style.display = "block";
+
+    autoSlides();
+
+}
+
+/* BACK BUTTON */
+
+function goBack(){
+
+    document.getElementById("slideshowPage").style.display = "none";
+
+    document.getElementById("mainPage").style.display = "block";
+
+}
+
+/* AUTO SLIDESHOW */
+
+let slideIndex = 0;
+
+function autoSlides(){
+
+    let slides = document.getElementsByClassName("slide-img");
+
+    for(let i=0; i<slides.length; i++){
+
+        slides[i].style.display = "none";
+
+    }
+
+    slideIndex++;
+
+    if(slideIndex > slides.length){
+
+        slideIndex = 1;
+
+    }
+
+    slides[slideIndex-1].style.display = "block";
+
+    setTimeout(autoSlides, 2500);
+
+}
+
+</script>
+
+</body>
+</html>
